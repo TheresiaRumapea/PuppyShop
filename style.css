@@ -1,0 +1,593 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kalam&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  margin-top: 176px;
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none;
+}
+.text-blue {
+  color: #0096c7;
+}
+.svg-white {
+  fill: #fff;
+}
+.myflex-rata-atas {
+  display: flex;
+  justify-content: space-between;
+}
+.myflex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myflex-evently {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.myflex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.myflex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FONT AWESOME */
+#scroll-button .fa-arrow-up {
+  font-size: 30px !important ;
+}
+#scroll-button {
+  border-radius: 50%;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: 22px;
+  bottom: 20px;
+  background-color: #0096c7;
+  z-index: 9999;
+  transition: all 0.3s;
+}
+#scroll-button:active {
+  background-color: #045874;
+}
+/* untuk JS */
+#scroll-button.muncul {
+  opacity: 63%;
+  /* agar transisi seperti turun ke bawah */
+  bottom: 10px;
+}
+#scroll-button.chageBG {
+  background-color: #7a9199 !important ;
+}
+
+/* ==========================MODAL======================= */
+.modal-header,
+.modal-footer {
+  border-bottom: none !important;
+  border-top: none;
+}
+.modal-header h4,
+.modal-header h5 {
+  font-weight: bold;
+}
+.modal input {
+  border: none;
+}
+.modal-body label,
+.modal-body button {
+  font-weight: bold;
+  font-size: 14px;
+}
+.modal-body #emailHelp {
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+.modal-body span {
+  font-weight: bold;
+}
+.d-grid.gap-2 {
+  margin-bottom: 62px;
+}
+.block {
+  width: 100%;
+  text-align: center;
+}
+/* ================================NAVBAR============== */
+.navbar-puppy {
+  background-color: #0096c7;
+}
+/* ============TOP NAVBAR */
+.fa-bell {
+  color: #0096c7;
+}
+.left-top-navbar,
+.right-top-navbar a {
+  font-size: 14px;
+}
+.right-top-navbar a {
+  color: #fff;
+  margin-right: 15px;
+}
+.right-top-navbar .dropdown-menu a {
+  color: #000;
+}
+.right-top-navbar ul {
+  margin-bottom: 0;
+}
+.left-top-navbar .ikuti {
+  border-left: 2px solid hsla(0, 0%, 100%, 0.22);
+}
+.right-top-navbar a:hover {
+  color: rgb(223, 223, 223);
+}
+.right-top-navbar .dropdown-menu a:hover {
+  color: #0096c7;
+}
+.navbar-daftar {
+  border-right: 2px solid hsla(0, 0%, 100%, 0.22);
+}
+/*=========== NAVBAR BOTTOM */
+.bottom-navbar .navbar {
+  padding: 10px 0;
+}
+.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+}
+.navbar input {
+  height: 21px;
+  width: 400px;
+}
+.nav-input {
+  position: relative;
+}
+.nav-input svg {
+  position: absolute;
+  top: 0px;
+  right: 12px;
+  fill: #0096c7;
+  width: 18px;
+}
+.bottom-navbar .dropdown-menu a {
+  font-size: 12px;
+}
+
+/* =================================SLIDER=============== */
+.slider .carousel-inner {
+  border-radius: 20px;
+}
+.slider h1 {
+  margin: auto;
+  margin-top: -530px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(230, 230, 230, 0.4);
+  border-radius: 25px;
+}
+
+.carousel-control-prev svg,
+.carousel-control-next svg {
+  fill: rgb(233, 231, 231);
+}
+
+.slider .carousel-indicators button {
+  height: 7px;
+  width: 40px;
+}
+
+/* Membuat Teks Persis Di Tengah Container Slider */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Styling centered h2 */
+.centered h2 {
+  border-radius: 10px;
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+}
+
+/* ==============================CATEGORY & CARD=============== */
+.title-category {
+  background-color: #48cae4;
+  padding: 0;
+}
+.main-category:hover {
+  color: #0096c7;
+  fill: #0096c7;
+}
+.category {
+  border-radius: 10px;
+}
+.title-category {
+  border-radius: 10px 10px 0 0;
+}
+.type-category {
+  font-size: 15px;
+}
+.type-category .main-category {
+  margin-top: 7px;
+}
+/* ====CARD DOG==== */
+.card-dog-category {
+  border-radius: 10px;
+}
+.card-dog-category img {
+  border-radius: 10px 10px 0 0;
+}
+.caption-card-dog-category span {
+  font-size: 16px;
+}
+.puppy-birth svg {
+  fill: #48cae4;
+}
+.caption-card-dog-category button,
+.card-detail-puppy button,
+.PuppyShop-com button {
+  margin-top: 15px;
+  font-size: 14px;
+  background-color: #48cae4;
+  border-radius: 7px;
+  color: rgb(88, 88, 88);
+  fill: rgb(88, 88, 88);
+}
+.caption-card-dog-category button:hover,
+.card-detail-puppy button:hover,
+.PuppyShop-com button:hover {
+  background-color: #1ba2cf;
+  color: #000;
+  fill: #000;
+}
+
+/* ========================FLASH SALE================ */
+.flashSale {
+  padding: 70px 0;
+}
+
+.flashSale h4 {
+  font-family: "Alfa Slab One", cursive;
+}
+.flashSale .promo,
+.flashSale .promo span {
+  font-family: "Kalam", cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+.flashSale .promo span {
+  color: #1ba2cf;
+}
+.carousel-indicators {
+  bottom: -50px;
+}
+.flashSale .carousel-indicators li {
+  background-color: #0096c7;
+  margin-bottom: -50px;
+}
+
+/* =========================STORY HUMAN-DOG============= */
+.caption-human-dog:hover {
+  transform: translateY(-50px);
+}
+.human-dog .container {
+  padding: 0 120px;
+}
+.human-dog img {
+  width: 380px;
+  border-radius: 5px;
+}
+.caption-human-dog {
+  margin-left: -60px;
+  width: 350px;
+  height: 190px;
+  font-size: 14px;
+  padding: 10px 20px;
+  box-shadow: 1px 2px 3px 0px #90daf3;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+/* ========================PUPPYSHOP.com========= */
+.PuppyShop-com,
+.advantage {
+  background-color: #e4f8fc;
+  padding-top: 30px;
+  margin-top: 70px;
+}
+.PuppyShop-com img {
+  transition: all 0.3s;
+}
+.PuppyShop-com img:hover {
+  transform: scale(1.2);
+  transform: translateY(-15px);
+}
+.PuppyShop-com p {
+  font-size: 14px;
+  line-height: 25px;
+}
+.PuppyShop-com .wave,
+.advantage .wave {
+  margin-top: -215px;
+}
+/* ================ADVANTAGE================ */
+.advantage svg {
+  fill: #0096c7;
+  min-height: 30px;
+}
+/* ==============TESTIMONI=============*/
+.testimoni .carousel-item {
+  padding: 0 100px;
+  font-size: 14px;
+}
+.testimoni .carousel-control-prev-icon,
+.testimoni .carousel-control-next-icon {
+  outline: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 150%, 150%;
+}
+
+/* ===============WARRANTY & NOTE WARRANTY========== */
+.warranty .container,
+.note-warranty .container {
+  font-size: 14px;
+}
+.warranty svg,
+.note-warranty svg {
+  fill: #0096c7;
+  margin-right: 10px;
+}
+.warranty p,
+.note-warranty p {
+  margin-bottom: 0;
+}
+.note-warranty hr {
+  color: #0096c7;
+  height: 1px;
+}
+/* =========================FOOTER============================ */
+.footer {
+  background-color: #e4f8fc;
+}
+.footer .container {
+  flex-wrap: wrap;
+  padding: 45px;
+}
+.footer a {
+  font-weight: 100;
+  font-size: 14px;
+}
+.footer-1 {
+  width: 45%;
+}
+.footer-1 :nth-child(2) {
+  font-size: 14px;
+}
+.footer-2 ul,
+.footer-3 ul {
+  padding-left: 0;
+  line-height: 30px;
+}
+.footer-2 a,
+.footer-3 a,
+.footer p {
+  color: #000;
+  transition: all 0.3s ease-in;
+}
+.footer-2 a:hover,
+.footer-3 a:hover {
+  color: #0096c7;
+  fill: #0096c7;
+}
+/* footer-copyright */
+.footer-copyright {
+  background-color: #0096c7;
+  padding: 30px 0px;
+}
+.footer-copyright ul {
+  padding: 0;
+}
+.footer-copyright a,
+.footer-copyright p {
+  font-size: 16px;
+  margin-right: 40px;
+  color: #fff;
+}
+.footer-copyright a:hover {
+  color: rgb(77, 77, 77);
+}
+.footer-copyright p {
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* ===================CARD OWNER====================== */
+.card-contact-owner {
+  border-radius: 10px;
+}
+.card-contact-owner img {
+  border-radius: 10px 10px 0 0;
+  transition: all 0.4s ease;
+}
+.card-contact-owner img:hover {
+  transform: scale(1.03);
+}
+.icon-contact-owner a svg {
+  margin-right: 10px;
+  fill: #0096c7;
+  transition: all 0.3s ease-in;
+}
+.icon-contact-owner a svg:hover {
+  fill: #48cae4;
+}
+/* ==================CARD DETAIL PUPPY================ */
+.card-detail-puppy table tr {
+  line-height: 35px;
+}
+.card-detail-puppy {
+  border-radius: 10px;
+  font-size: 16px;
+}
+/* ============================INDEX 3======== */
+.order-rule svg {
+  fill: #0096c7;
+}
+.order-rule p {
+  font-size: 14px;
+}
+/*========================RESPONSIVE BREAKPOINT===============*/
+
+/*HD FULLSCREEN  */
+@media screen and (max-width: 1200px) {
+  /* rentang 768 px -> 1200 px */
+  a {
+    /* jika di tablet fontsize a tidak diatur 
+      otomatis ukuran a di table & mobile akan 13px*/
+    font-size: 13px;
+  }
+  .bottom-navbar .nav-input {
+    margin-top: 20px;
+  }
+  .bottom-navbar input {
+    width: 250px;
+    font-size: 10px;
+  }
+  .slider h1 {
+    font-size: 30px;
+    margin-top: -200px;
+  }
+  /* STORY HUMAN-DOG */
+  .human-dog .container {
+    padding: 0 30px;
+  }
+  .caption-human-dog {
+    font-size: 13px;
+    padding: 10px;
+  }
+  /* PUPPYSHOP.com === ADVANTAGES*/
+  .PuppyShop-com .wave,
+  .advantage .wave {
+    margin-top: 1px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .category .main-category {
+    font-size: 10px;
+  }
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+  /* NAVBAR */
+  .left-top-navbar {
+    display: none;
+  }
+  .input svg {
+    top: -14px;
+    right: -10px;
+    fill: #fff;
+  }
+  /* LIST OF CATEGORY */
+  .category .type-category {
+    height: 400px;
+    overflow-y: scroll;
+  }
+  .category {
+    margin: 0 50px;
+  }
+  .title-category svg {
+    width: 20px;
+    margin-right: -45px;
+  }
+  .main-category span {
+    font-size: 12px;
+  }
+  .main-category svg {
+    width: 23px;
+  }
+  /* SLIDER */
+  /* Mengubah ukuran h2nya ketika sudah dibawah 768px */
+  .slider .carousel-indicators button {
+    height: 3px;
+    width: 20px;
+  }
+  .centered h2 {
+    font-size: 15px;
+    font-weight: 900;
+  }
+  .centered h4 {
+    font-size: 13px;
+  }
+  .carousel-control-next svg,
+  .carousel-control-prev svg {
+    width: 45px;
+  }
+  /* CARD */
+  .caption-card-dog-category h6 {
+    font-size: 14px;
+  }
+  .caption-card-dog-category span {
+    font-size: 11px;
+  }
+  .caption-card-dog-category button {
+    font-size: 8px;
+  }
+  /* STORY HUMAN-DOG */
+  .human-dog .container {
+    padding: 0 50px;
+  }
+  .human-dog img {
+    width: 100%;
+  }
+  .human-dog .container {
+    flex-direction: column;
+  }
+  .caption-human-dog {
+    margin-top: 30px;
+    /* font-size: 10px; */
+    margin-left: 0;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  /* FOOTER */
+  .footer-icon svg {
+    width: 25px;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+}

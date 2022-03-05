@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PuppyShop, Order Step</title>
+
+    <link rel="icon" href="img/LogoPuppyShop.png" type="image/gif" sizes="18x18" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://use.fontawesome.com/4bffcbbe62.js"></script>
+  </head>
+  <body style="margin-top: 150px">
+    <button id="scroll-button" type="button" class="btn btn-primary"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+    <!-- START OF NAVBAR -->
+    <section class="navbar-puppy fixed-top">
+      <div class="container">
+        <div class="top-navbar myflex-rata-atas mt-2">
+          <div class="left-top-navbar myflex-start">
+            <a href="" class="text-white pr-3">Jual di PuppyShop</a>
+            <div class="ikuti text-white pl-3 myflex">
+              Ikuti kami di
+              <a href="" class="pl-2">
+                <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"
+                  />
+                </svg>
+              </a>
+              <a href="" class="pl-2">
+                <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="right-top-navbar myflex-start">
+            <ul class="myflex">
+              <li><a href="">Tentang PuppyShop</a></li>
+              <li>
+                <a class="button-notification" href="">
+                  <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M22 20H2v-2h1v-6.969C3 6.043 7.03 2 12 2s9 4.043 9 9.031V18h1v2zM5 18h14v-6.969C19 7.148 15.866 4 12 4s-7 3.148-7 7.031V18zm4.5 3h5a2.5 2.5 0 1 1-5 0z" />
+                  </svg>
+                  Notifikasi</a
+                >
+              </li>
+              <li>
+                <a href="">
+                  <svg class="svg-white mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1 1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z"
+                    /></svg
+                  >Bantuan</a
+                >
+              </li>
+              <li class="navbar-daftar">
+                <a href="" data-toggle="modal" data-target="#Daftar"><b>Daftar</b></a>
+              </li>
+              <li class="navbar-login ml-3">
+                <a href="" data-toggle="modal" data-target="#Login"><b>Login</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-navbar">
+          <nav class="navbar navbar-expand-lg navbar-light myflex">
+            <a class="navbar-brand text-white myflex" href="index.html">
+              <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M7.564 19.28a9.69 9.69 0 0 0 2.496-.217 8.8 8.8 0 0 1 2.98-.131c.547.067.985.165 1.288.257 1.078.275 2.61.223 3.005-.41.291-.468.253-.787-.026-1.199a1.886 1.886 0 0 0-.212-.26 25.006 25.006 0 0 1-.743-.618 25.618 25.618 0 0 1-1.753-1.66 16.151 16.151 0 0 1-1.577-1.893l-.036-.053c-.742-1.139-1.558-1.067-2.002-.317a9.604 9.604 0 0 1-.955 1.331c-.41.482-.83.89-1.305 1.297-.123.105-.503.42-.412.344-.004.003-.017.015.051-.071-.098.12-.95.877-1.2 1.162-.515.583-.723 1.08-.645 1.48.072.376.219.587.45.745a1.432 1.432 0 0 0 .48.206l.116.007zm7.098-7.276c1.376 1.97 3.732 3.793 3.732 3.793s2.063 1.748.637 4.038c-1.426 2.29-5.253 1.278-5.253 1.278s-1.52-.49-3.286-.098c-1.765.395-3.286.245-3.286.245S5 21.015 4.554 18.701c-.446-2.314 2.06-4.04 2.258-4.284.195-.247 1.512-1.073 2.452-2.658.94-1.586 3.583-2.54 5.398.245zm5.539-1.42c0 .458.19 2.393-1.553 2.432-1.742.038-1.816-1.178-1.816-2.05 0-.913.188-2.205 1.59-2.205 1.4 0 1.779 1.369 1.779 1.824zm-5.43-2.777c-1.18-.152-1.447-1.222-1.333-2.293.096-.875 1.143-2.219 1.981-2.026.837.19 1.6 1.3 1.446 2.254-.151.957-.911 2.218-2.094 2.065zM9.755 7.44c-.86 0-1.56-.993-1.56-2.22 0-1.227.699-2.22 1.56-2.22.863 0 1.56.993 1.56 2.22 0 1.227-.697 2.22-1.56 2.22zm-3.793 4.566c-1.695.365-2.326-1.597-2.14-2.515 0 0 .2-1.987 1.576-2.11 1.093-.095 1.898 1.101 1.981 1.785.051.444.283 2.475-1.417 2.84z"
+                />
+              </svg>
+              PuppyShop</a
+            >
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto myflex">
+                <li class="nav-item nav-input d-flex myflex" style="margin: 0">
+                  <input class="form-control rounded-pill me-1" type="search" aria-label="Search" />
+                  <a href="#"
+                    ><svg xmlns="http://www.w3.org/2000/svg" class="icon-white" viewBox="0 0 24 24" width="20" height="20">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown show">
+                    <a class="nav-link kategori text-white" id="dropdownCategoryLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Kategori</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownCategoryLink">
+                      <a class="dropdown-item" href="#"> > Golden Retriever</a>
+                      <a class="dropdown-item" href="#"> > Shiba Inu</a>
+                      <a class="dropdown-item" href="#"> > Chihuahua</a>
+                      <a class="dropdown-item" href="#"> > Pug </a>
+                      <a class="dropdown-item" href="#"> > Pomerania </a>
+                      <a class="dropdown-item" href="#"> > Pudel </a>
+                      <a class="dropdown-item" href="#"> > Rottweiler </a>
+                      <a class="dropdown-item" href="#"> > Yorkshire Terrier</a>
+                      <a class="dropdown-item" href="#"> > Beagle</a>
+                      <a class="dropdown-item" href="#"> > Lhasa Apso</a>
+                      <a class="dropdown-item" href="#"> > Poodle</a>
+                      <a class="dropdown-item" href="#"> > Shih Tzu</a>
+                      <a class="dropdown-item" href="#"> > Spitz</a>
+                      <a class="dropdown-item" href="#"> > American Bully</a>
+                      <a class="dropdown-item" href="#"> > Pitbull</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Kontak</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- END OF NAVBAR -->
+
+    <!-- START OF ORDER-RULE -->
+    <section class="order-rule">
+      <div class="container">
+        <div class="row">
+          <h5 class="mb-4 text-center"><b>Cara Order</b></h5>
+          <div class="col-sm-6 col-md-4">
+            <div class="card-rule myflex-center flex-column">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="90" height="90">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M7.564 19.28a9.69 9.69 0 0 0 2.496-.217 8.8 8.8 0 0 1 2.98-.131c.547.067.985.165 1.288.257 1.078.275 2.61.223 3.005-.41.291-.468.253-.787-.026-1.199a1.886 1.886 0 0 0-.212-.26 25.006 25.006 0 0 1-.743-.618 25.618 25.618 0 0 1-1.753-1.66 16.151 16.151 0 0 1-1.577-1.893l-.036-.053c-.742-1.139-1.558-1.067-2.002-.317a9.604 9.604 0 0 1-.955 1.331c-.41.482-.83.89-1.305 1.297-.123.105-.503.42-.412.344-.004.003-.017.015.051-.071-.098.12-.95.877-1.2 1.162-.515.583-.723 1.08-.645 1.48.072.376.219.587.45.745a1.432 1.432 0 0 0 .48.206l.116.007zm7.098-7.276c1.376 1.97 3.732 3.793 3.732 3.793s2.063 1.748.637 4.038c-1.426 2.29-5.253 1.278-5.253 1.278s-1.52-.49-3.286-.098c-1.765.395-3.286.245-3.286.245S5 21.015 4.554 18.701c-.446-2.314 2.06-4.04 2.258-4.284.195-.247 1.512-1.073 2.452-2.658.94-1.586 3.583-2.54 5.398.245zm5.539-1.42c0 .458.19 2.393-1.553 2.432-1.742.038-1.816-1.178-1.816-2.05 0-.913.188-2.205 1.59-2.205 1.4 0 1.779 1.369 1.779 1.824zm-5.43-2.777c-1.18-.152-1.447-1.222-1.333-2.293.096-.875 1.143-2.219 1.981-2.026.837.19 1.6 1.3 1.446 2.254-.151.957-.911 2.218-2.094 2.065zM9.755 7.44c-.86 0-1.56-.993-1.56-2.22 0-1.227.699-2.22 1.56-2.22.863 0 1.56.993 1.56 2.22 0 1.227-.697 2.22-1.56 2.22zm-3.793 4.566c-1.695.365-2.326-1.597-2.14-2.515 0 0 .2-1.987 1.576-2.11 1.093-.095 1.898 1.101 1.981 1.785.051.444.283 2.475-1.417 2.84z"
+                />
+              </svg>
+              <p class="text-blue"><b>1. Pilih jenis anjing</b></p>
+              <p class="text-center">Pilihlah jenis anjing yang Anda butuhkan. Cek ketersediaan di laman jenis anjing.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card-rule myflex-center flex-column">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="90" height="90">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path d="M4 12h3a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7C2 6.477 6.477 2 12 2s10 4.477 10 10v7a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h3a8 8 0 1 0-16 0z" />
+              </svg>
+              <p class="text-blue"><b>2. Konsultasi</b></p>
+              <p class="text-center">Setelah menemukan pilihan anjing yang tepat, segera lakukan order melalui whatsapp owner yang telah disediakan untuk setiap pilihan anjing.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card-rule myflex-center flex-column">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="90" height="90">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path d="M4 6.414L.757 3.172l1.415-1.415L5.414 5h15.242a1 1 0 0 1 .958 1.287l-2.4 8a1 1 0 0 1-.958.713H6v2h11v2H5a1 1 0 0 1-1-1V6.414zM5.5 23a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm12 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+              <p class="text-blue"><b>3. Order</b></p>
+              <p class="text-center">Informasi lebih lanjut dari ketersediaan dan sebagainya silahkan hubungi kontak kami melalui whatsapp owner yang telah disediakan untuk setiap pilihan anjing.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card-rule myflex-center flex-column">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="90" height="90">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path d="M22 10v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V10h20zm0-2H2V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v4zm-7 8v2h4v-2h-4z" />
+              </svg>
+              <p class="text-blue"><b>4. Pembayaran</b></p>
+              <p class="text-center">Lakukan pembayaran melalu bank transfer (only) agar pesanan segera di proses dan dikirimkan.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card-rule myflex-center flex-column">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="90" height="90">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M7.253 18.494l.724.423A7.953 7.953 0 0 0 12 20a8 8 0 1 0-8-8c0 1.436.377 2.813 1.084 4.024l.422.724-.653 2.401 2.4-.655zM2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308c.134-.01.269-.01.403-.004.054.004.108.01.162.016.159.018.334.115.393.249.298.676.588 1.357.868 2.04.062.152.025.347-.093.537a4.38 4.38 0 0 1-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268.12.116.237.235.363.346.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11.062.026.126.049.191.066a.35.35 0 0 0 .367-.13c.724-.877.79-.934.796-.934v.002a.482.482 0 0 1 .378-.127c.06.004.121.015.177.04.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265.004.067.01.175-.013.373-.032.259-.11.57-.188.733a1.155 1.155 0 0 1-.21.302 2.378 2.378 0 0 1-.33.288 3.71 3.71 0 0 1-.125.09 5.024 5.024 0 0 1-.383.22 1.99 1.99 0 0 1-.833.23c-.185.01-.37.024-.556.014-.008 0-.568-.087-.568-.087a9.448 9.448 0 0 1-3.84-2.046c-.226-.199-.435-.413-.649-.626-.89-.885-1.562-1.84-1.97-2.742A3.47 3.47 0 0 1 6.9 9.62a2.729 2.729 0 0 1 .564-1.68c.073-.094.142-.192.261-.305.127-.12.207-.184.294-.228a.961.961 0 0 1 .371-.1z"
+                />
+              </svg>
+              <p class="text-blue"><b>5. Konfirmasi</b></p>
+              <p class="text-center">Pilihlah jenis anjing yang Anda butuhkan. Cek ketersediaan di laman jenis anjing.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card-rule myflex-center flex-column">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="96" height="96">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M19 20H5v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-9l2.513-6.702A2 2 0 0 1 6.386 4h11.228a2 2 0 0 1 1.873 1.298L22 12v9a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1zM4.136 12h15.728l-2.25-6H6.386l-2.25 6zM6.5 17a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                />
+              </svg>
+              <p class="text-blue"><b>6. Pengiriman</b></p>
+              <p class="text-center">Anda akan mendapatkan resi resmi pengiriman hewan impian anda dengan aman dan cepat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF ORDER-RULE -->
+
+    <!-- START OF GARANSI -->
+    <section class="note-warranty mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="offset-md-3 col-md-6">
+            <hr />
+            <p class="text-center">
+              <b>Catatan :</b> kami tidak menerima sistem COD untuk luar area banyuwangi jika anda berada di luar kota anda bisa menggunakan metode pembayaran lewat bank transfer ke rekening resmi kami dengan jaminan ke amanan dan proses
+              cepat terpercaya kami nyaman anda aman.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF GARANSI -->
+
+    <!-- START OF FOOTER -->
+    <section class="footer mt-5 text-white">
+      <div class="container myflex-rata-atas">
+        <div class="footer-1">
+          <p class="mb-2"><b>Puppy Shop</b></p>
+          <p>PuppyShop - merupakan perusahaan yang bergerak dibidang jual anak anjing terlengkap, kami memberikan kemudahan bagi Anda yang cari hewan peliharaan dengan menghadirkan toko online yang aman proses mudah dan cepat.</p>
+        </div>
+        <div class="footer-2">
+          <p class="mb-2"><b>Layanan Pelanggan</b></p>
+          <ul>
+            <li><a href="">Cara Order</a></li>
+            <li><a href="">Jual di PuppyShop</a></li>
+            <li><a href="">Garansi PuppyShop</a></li>
+            <li><a href="">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div class="footer-3">
+          <p class="mb-2"><b>Ikuti Kami</b></p>
+          <ul>
+            <li>
+              <a href=""
+                ><svg class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.19 19.19 0 0 0-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4.598z"
+                  />
+                </svg>
+                Facebook</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><svg class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"
+                  />
+                </svg>
+                Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="footer-copyright">
+      <div class="container">
+        <ul class="myflex-center">
+          <li><a href="">Tentang Kami</a></li>
+          <li><a href="">Testimoni</a></li>
+          <li><a href="">Kontak</a></li>
+        </ul>
+        <p class="myflex-center">
+          Copyright
+          <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 3c1.82 0 3.413.973 4.288 2.428l-1.714 1.029A3 3 0 1 0 12 15a2.998 2.998 0 0 0 2.573-1.456l1.715 1.028A4.999 4.999 0 0 1 7 12c0-2.76 2.24-5 5-5z"
+            /></svg
+          >2021 PuppyShop.com. All Rights Reserved.
+        </p>
+      </div>
+    </section>
+    <!-- END OF FOOTER -->
+
+    <!-- MODAL -->
+    <!-- Button trigger modal -->
+    <!-- Modal LOGIN -->
+    <div class="modal fade" id="Login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="myflex">
+              <div class="flex-column">
+                <h5 class="text-blue" id="exampleModalLongTitle">Login.</h5>
+                <h4 class="text-blue" id="exampleModalLongTitle">Welcome Back !</h4>
+              </div>
+              <img style="width: 53%" src="img/login.png" alt="pitcure of doggy" />
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Mail ID</label>
+                <input type="email" class="form-control shadow" id="exampleInputEmail1" aria-describedby="emailHelp" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control shadow" id="exampleInputPassword1" />
+                <small data-toggle="modal" data-target="#Verification" data-dismiss="modal" id="emailHelp" class="form-text text-muted text-end">Forget Password ?</small>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary shadow block mb-2">Log in</button>
+            <div class="myflex m-auto">
+              <hr width="200px" />
+              <span>Or</span>
+              <hr width="200px" />
+            </div>
+            <button class="btn shadow myflex-center block mt-2 mb-5" type="button"><img class="mr-1" style="width: 4%" src="img/google.png" alt="" /> Continue with Google</button>
+            <p class="m-auto">
+              <small
+                >Don't have an account ? <span><a href="" data-target="#Daftar" data-toggle="modal" data-dismiss="modal">Create now.</a></span></small
+              >
+            </p>
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            ada 2 kerjaan sekaligus , kemodal daftar & menutup login dengan dismiss
+            <button type="submit" class="btn btn-primary" data-target="#Daftar" data-toggle="modal" data-dismiss="modal">Daftar</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF MODAL 1 -->
+
+    <!-- Modal SIGN IN -->
+    <div class="modal fade" id="Daftar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="myflex">
+              <div class="flex-column">
+                <h5 class="text-blue" id="exampleModalLongTitle">Hello.</h5>
+                <h4 class="text-blue" id="exampleModalLongTitle">Sign up to get’s started !</h4>
+              </div>
+              <img style="width: 53%" src="img/register.png" alt="pitcure of doggy" />
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="myflex">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">First Name</label>
+                  <input type="email" class="form-control shadow" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Last Name</label>
+                  <input type="email" class="form-control shadow" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Mail ID</label>
+                <input type="email" class="form-control shadow" id="exampleInputEmail1" aria-describedby="emailHelp" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control shadow" id="exampleInputPassword1" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary shadow block mb-2">Sign in</button>
+            <div class="myflex m-auto">
+              <hr width="200px" />
+              <span>Or</span>
+              <hr width="200px" />
+            </div>
+            <button class="btn shadow myflex-center block mt-2 mb-5" type="button"><img class="mr-1" style="width: 4%" src="img/google.png" alt="" /> Continue with Google</button>
+            <p class="m-auto">
+              <small
+                >Already have an account ? <span><a href="" data-target="#Login" data-toggle="modal" data-dismiss="modal">Login.</a></span></small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF MODAL 2 -->
+
+    <!-- Modal VERIFICATION -->
+    <div class="modal fade" id="Verification" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="myflex">
+              <div class="flex-column">
+                <h5 class="text-blue" id="exampleModalLongTitle">Forgot Password.</h5>
+                <h4 class="text-blue" id="exampleModalLongTitle">Account Verification !</h4>
+              </div>
+              <img style="width: 53%" src="img/verification.png" alt="pitcure of doggy" />
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Verification Code</label>
+                <input type="text" class="form-control shadow" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                <small id="emailHelp" class="form-text text-muted">Enter your verification code from given Mail ID</small>
+              </div>
+              <button type="submit" class="btn btn-primary shadow block mt-3">Submit</button>
+              <p class="text-center mt-5">
+                <small
+                  >Didn’t received the verification code ? <span><a href="">Resend again.</a></span></small
+                >
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF MODAL 3 -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
